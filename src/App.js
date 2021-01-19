@@ -27,6 +27,14 @@ class App extends React.Component {
         }
       ]
     }
+
+    this.addTodo = this.addTodo.bind(this);
+  }
+
+
+  addTodo(todo){
+    console.log(todo)
+    //HW : add todo object to this.state.todos
   }
 
   render(){
@@ -34,7 +42,7 @@ class App extends React.Component {
       <div className="page">
         <Header appName={this.appName}/>
         <main className="todoApp">
-          <AddTodo />
+          <AddTodo addTodo={this.addTodo}/>
           <TodoList todos={this.state.todos} />
           <TodosCount count={this.state.todos.length}/>
         </main>
