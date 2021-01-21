@@ -12,13 +12,13 @@ class AddTodo extends React.Component {
 
 	}
 
-	handleChange = (e)=>{
+	handleChange = (e) => {
 		this.setState({
 			"todoTitle": e.target.value
 		})
 	}
 
-	handleClick = (e)=>{
+	handleClick = (e) => {
 		console.log( this.state.todoTitle );
 		console.dir(this.props)
 
@@ -27,7 +27,7 @@ class AddTodo extends React.Component {
 		});
 	}
 
-	render(){
+	render() {
 		return (
 			<StyledAddToDo>
 				<input

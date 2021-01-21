@@ -80,6 +80,7 @@ export const StyledItem = styled.li`
     display: flex;
     gap: 6px;
     align-items: center;
+    border-radius: 5px;
     label {
         display: flex;
         gap: 10px;
