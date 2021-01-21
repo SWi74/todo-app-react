@@ -8,7 +8,7 @@ const Plate = css`
 
 export const StyledPage = styled.div`
     display: grid;
-    grid-template-columns: auto minmax(300px, 800px) auto;
+    grid-template-columns: auto minmax(100px, 800px) auto;
     padding: 32px;
     background: ${props => props.theme.colors.dark};
     min-height: 100vh;
@@ -32,7 +32,7 @@ export const ToDoPanel = styled.div`
     ${Plate};
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
 `
 
 export const StyledAddToDo = styled.div`
@@ -64,7 +64,7 @@ export const StyledAddToDo = styled.div`
 		font: inherit;
 		font-weight: bold;
 		color: ${props => props.theme.colors.dark};
-		cursor: pointer;	
+        cursor: pointer;
 	}
 `
 
@@ -76,6 +76,25 @@ export const StyledToDoList = styled.div`
 `
 
 export const StyledItem = styled.li`
-    padding: 16px;
     box-shadow: ${props => props.theme.effects.bump};
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    label {
+        display: flex;
+        gap: 10px;
+        margin: 0 auto 0 0;
+        padding: 16px;
+        align-items: flex-start;
+    }
+    svg {
+        fill: ${props => props.theme.colors.accent};
+        flex-shrink: 0;
+    }
+`
+
+export const StyledCount = styled.div`
+    color: ${props => props.theme.colors.grey};
+    padding: 16px;
+    text-align: center;
 `

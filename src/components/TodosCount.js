@@ -1,8 +1,10 @@
 import React from 'react';
 
+import { StyledCount } from "./styled"
+
 const TodosCount = (props) => {
 	return (
-		<div className="total">total items: <span className="output">{props.count}</span></div>
+		<StyledCount className="total">total items: <span className="output">{props.count}</span></StyledCount>
 	)
 }
 

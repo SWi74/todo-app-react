@@ -4,17 +4,10 @@ import { ThemeProvider } from "styled-components"
 const colors = {
   dark: "#333",
   light: "white",
+  grey: "#a1a1a1",
 
-  bg:"#333333",
   lightBg:"rgba(77, 77, 77, 0.4)",
   darkBg: "rgba(26, 26, 26, 0.4)",
-
-  primary: "#16697A",
-  secondary: "#489FB5",
-  tetrary: "#82C0CC",
-
-  highlight: "rgba(255, 255, 255, 0.1)",
-  shadow: "rgba(0, 0, 0, 0.1)",
 
   accent: "aquamarine"
 }
