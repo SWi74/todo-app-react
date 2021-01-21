@@ -4,7 +4,7 @@ import { StyledCount } from "./styled"
 
 const TodosCount = (props) => {
 	return (
-		<StyledCount className="total">total items: <span className="output">{props.count}</span></StyledCount>
+		<StyledCount className="total">Total items: <span className="output">{props.count}</span></StyledCount>
 	)
 }
 

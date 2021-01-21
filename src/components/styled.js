@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 
 const Plate = css`
-    box-shadow: ${props => props.theme.effects.volume};
+    box-shadow: ${props => props.theme.effects.bump};
     border-radius: 10px;
     padding: 32px;
 `

@@ -22,9 +22,7 @@ class AddTodo extends React.Component {
 		console.log( this.state.todoTitle );
 		console.dir(this.props)
 
-		this.props.addTodo({
-			// HW: make the new todo object, which will be passed to App.addTodo()
-		});
+		this.props.addTodo(this.state.todoTitle);
 	}
 
 	render() {

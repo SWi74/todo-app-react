@@ -18,7 +18,6 @@ const media = {
 }
 
 const effects = {
-  volume: `5px 5px 5px ${colors.darkBg}, -5px -5px 5px ${colors.lightBg}`,
   bump: `2px 2px 2px ${colors.darkBg}, -2px -2px 2px ${colors.lightBg}`,
   focused: `inset 0 0 5px ${colors.accent}`,
   inset: `inset -2px -2px 2px ${colors.lightBg}, inset 2px 2px 2px ${colors.darkBg}`

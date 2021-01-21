@@ -9,7 +9,6 @@ import Theme from "./Theme"
 import GlobalStyle from "./GlobalStyle"
 import { StyledPage, StyledMain, ToDoPanel } from './components/styled';
 
-
 class App extends React.Component {
     constructor(){
         super()
@@ -37,9 +36,23 @@ class App extends React.Component {
     }
     
     
-    addTodo(todo) {
-        console.log(todo)
-        //HW : add todo object to this.state.todos
+    addTodo(todoTitle) {
+        console.log(todoTitle);
+        
+        const todos = this.state.todos;
+
+        // fix id generation
+        const id = todos.length+1; 
+
+        const newTodos = [...todos, {
+            "userId": 1,
+            "id": id,
+            "title": todoTitle,
+            "completed": false
+        }]
+
+        this.setState( { todos:newTodos } )
+
     }
     
     render() {
