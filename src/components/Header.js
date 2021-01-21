@@ -1,9 +1,11 @@
 import React from 'react';
+import { StyledHeader } from "./styled"
 
-const Header = (props) => {
-	return (
-		<header>{props.appName}</header>
-	)
-}
+
+const Header = (props) => ( 
+	<StyledHeader>
+		<h1>{props.appName}</h1>
+	</StyledHeader>
+)
 
 export default Header;

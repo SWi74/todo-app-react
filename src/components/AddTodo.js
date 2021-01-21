@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { StyledAddToDo } from "./styled"
+
 class AddTodo extends React.Component {
 	constructor(props){
 		super(props)
@@ -27,16 +29,16 @@ class AddTodo extends React.Component {
 
 	render(){
 		return (
-			<div className="addTodo">
+			<StyledAddToDo>
 				<input
 					name="todoTitle"
 					type="text"
 					autoFocus
-					placeholder="add new todo ..."
+					placeholder="Add new to-do..."
 					value={this.state.todoTitle}
 					onChange={this.handleChange}/>
 				<button className="btnAdd" onClick={this.handleClick}>Add</button>
-			</div>
+			</StyledAddToDo>
 		 )
 	}
 }

@@ -1,11 +1,13 @@
 import React from 'react';
 import TodoItem from "./TodoItem";
 
+import { StyledToDoList } from "./styled"
+
 const TodoList = (props) => {
 	return (
-		<ul className="todoListItems">
+		<StyledToDoList className="todoListItems">
 			{props.todos.map( todo => <TodoItem todo={todo} key={todo.id}/>)}
-		</ul>
+		</StyledToDoList>
 	)
 }
 
