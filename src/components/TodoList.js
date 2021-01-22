@@ -5,7 +5,8 @@ import { StyledToDoList } from "./styled"
 
 const TodoList = (props) => {
 	return (
-		<StyledToDoList className="todoListItems">
+		<StyledToDoList>
+		{/* <StyledToDoList className="todoListItems"> */}
 			{props.todos.map( todo => <TodoItem todo={todo} key={todo.id}/>)}
 		</StyledToDoList>
 	)
