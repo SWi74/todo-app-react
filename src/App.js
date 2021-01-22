@@ -22,24 +22,24 @@ class App extends React.Component {
         this.addTodo = this.addTodo.bind(this);
     }
 
-    addTodo(todoTitle){
-        console.log(todoTitle);
-        const todos = this.state.todos;
+    // addTodo(todoTitle){
+    //     console.log(todoTitle);
+    //     const todos = this.state.todos;
     
-        // this.state.todos[1].id = 999;
+    //     // this.state.todos[1].id = 999;
     
-        const id = todos.length+1; // todo: make it propper
+    //     const id = todos.length+1; // todo: make it propper
    
-        const newTodos = [...todos,{
-                "userId": 1,
-                "id": id,
-                "title": todoTitle,
-                "completed": false
-            }
-        ]
+    //     const newTodos = [...todos,{
+    //             "userId": 1,
+    //             "id": id,
+    //             "title": todoTitle,
+    //             "completed": false
+    //         }
+    //     ]
     
-        this.setState( {todos:newTodos} );
-    }
+    //     this.setState( {todos:newTodos} );
+    // }
     
     componentDidMount() {
 
@@ -56,9 +56,9 @@ class App extends React.Component {
         })
     }
 
-    addTodo = (todoTitle)=>{
+    addTodo = (todoTitle) => {
         const todos = this.state.todos;
-        const id= todos[todos.length-1].id+1;
+        const id = todos[todos.length-1].id+1;
     
         const newTodo = {
           "userId": 1,
@@ -83,7 +83,6 @@ class App extends React.Component {
         this.setState({todos:todos});
       }
 
-// OK
 
     render() {
         return (

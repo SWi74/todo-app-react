@@ -2,8 +2,16 @@ import React from 'react';
 
 import { StyledItem } from "./styled"
 
-const TodoItem = ({todo}) => {
-	// console.dir(todo);
+const TodoItem = ( {todo, removeTodo,toggleComplete} ) => {
+	const handleRemove = (e) => {
+		console.log(`delete click`);
+		removeTodo(todo.id)
+	}
+
+	const handleToggleComplete = (e) => {
+		toggleComplete(todo.id);
+	}
+	
 	return (
 		<StyledItem>
 			<label htmlFor={todo.id}>
