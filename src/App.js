@@ -24,7 +24,8 @@ class App extends React.Component {
 
     componentDidMount() {
 
-        fetch("http://localhost:3000/todos")
+        // fetch("http://localhost:3000/todos")
+        fetch("https://jsonplaceholder.typicode.com/todos")
         .then(response => response.json())
         .then(data => {
             this.setState({
