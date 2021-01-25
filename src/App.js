@@ -72,7 +72,7 @@ class App extends React.Component {
                         <Header appName={this.appName} />
                         <ToDoPanel>
                             <AddTodo addTodo={this.addTodo} />
-                            <TodoList todos={this.state.todos} />
+                            <TodoList todos={this.state.todos} removeTodo={this.removeTodo} toggleComplete={this.toggleComplete} />
                             <TodosCount count={this.state.todos.length} />
                         </ToDoPanel>
                     </StyledMain>
