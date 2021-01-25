@@ -12,6 +12,12 @@ class AddTodo extends React.Component {
 
 	}
 
+	resetInput = () => {
+		this.setState({
+			"todoTitle": ""
+		})
+	}
+
 	handleChange = (e) => {
 		this.setState({
 			"todoTitle": e.target.value
@@ -19,10 +25,15 @@ class AddTodo extends React.Component {
 	}
 
 	handleClick = (e) => {
-		console.log( this.state.todoTitle );
-		console.dir(this.props)
+		// console.log( this.state.todoTitle );
+		// console.dir(this.props)
 
 		this.props.addTodo(this.state.todoTitle);
+		this.resetInput()
+	}
+
+	enableButton = (e) => {
+		return this.state.todoTitle === "" ? <button disabled onClick={this.handleClick}>Add</button> : <button onClick={this.handleClick}>Add</button>
 	}
 
 	render() {
@@ -35,7 +46,7 @@ class AddTodo extends React.Component {
 					placeholder="Add new to-do..."
 					value={this.state.todoTitle}
 					onChange={this.handleChange}/>
-				<button className="btnAdd" onClick={this.handleClick}>Add</button>
+				{this.enableButton()}
 			</StyledAddToDo>
 		 )
 	}

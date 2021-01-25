@@ -22,30 +22,7 @@ class App extends React.Component {
         this.addTodo = this.addTodo.bind(this);
     }
 
-    // addTodo(todoTitle){
-    //     console.log(todoTitle);
-    //     const todos = this.state.todos;
-    
-    //     // this.state.todos[1].id = 999;
-    
-    //     const id = todos.length+1; // todo: make it propper
-   
-    //     const newTodos = [...todos,{
-    //             "userId": 1,
-    //             "id": id,
-    //             "title": todoTitle,
-    //             "completed": false
-    //         }
-    //     ]
-    
-    //     this.setState( {todos:newTodos} );
-    // }
-    
     componentDidMount() {
-
-        // HW:  use fetch API to set initial state, instead of the hardcoded values above
-        // You can use the "https://jsonplaceholder.typicode.com/todos" for server endpoint
-        // Reference: https://reactjs.org/docs/faq-ajax.html
 
         fetch("http://localhost:3000/todos")
         .then(response => response.json())
@@ -59,6 +36,7 @@ class App extends React.Component {
     addTodo = (todoTitle) => {
         const todos = this.state.todos;
         const id = todos[todos.length-1].id+1;
+        
     
         const newTodo = {
           "userId": 1,
@@ -89,7 +67,6 @@ class App extends React.Component {
             <Theme>
                 <GlobalStyle />
                 <StyledPage>
-                <h1>{this.state.todos.t}</h1>
                     <StyledMain>
                         <Header appName={this.appName} />
                         <ToDoPanel>

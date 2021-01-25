@@ -66,6 +66,12 @@ export const StyledAddToDo = styled.div`
 		color: ${props => props.theme.colors.dark};
         cursor: pointer;
 	}
+    button:disabled {
+        background: ${props => props.theme.colors.dark};
+        box-shadow: ${props => props.theme.effects.inset};
+        color: ${props => props.theme.colors.light};
+        cursor: auto;
+    }
 `
 
 export const StyledToDoList = styled.div`
@@ -81,7 +87,7 @@ export const StyledItem = styled.li`
     gap: 6px;
     align-items: center;
     border-radius: 5px;
-    label {
+    > div {
         display: flex;
         gap: 10px;
         margin: 0 auto 0 0;
