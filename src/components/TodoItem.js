@@ -35,36 +35,5 @@ const TodoItem = ( {todo, removeTodo, toggleComplete} ) => {
 		</StyledItem>
 	 );
 }
-// const TodoItem = ( {todo, removeTodo, toggleComplete} ) => {
-// 	const handleRemove = (e) => {
-// 		console.log(`delete click`);
-// 		removeTodo(todo.id)
-// 	}
-
-// 	const handleToggleComplete = (e) => {
-// 		toggleComplete(todo.id);
-// 	}
-	
-// 	function checkComplete(todo) {
-// 		return todo.completed ? <Complete /> : <NotComplete /> 
-// 	}
-
-// 	return (
-// 		<StyledItem>
-// 			{/* <label htmlFor={todo.id}>
-// 				<input id={todo.id} type="checkbox" /> */}
-// 			<div>
-// 				<span>{todo.id}.</span>
-// 				<span style={todo.completed ? { textDecoration: "line-through" } : {textDecoration: "none"} }>{todo.title}</span>
-// 			</div>
-// 			{/* </label> */}
-			
-// 			{checkComplete(todo)}
-
-// 			<Delete />
-			
-// 		</StyledItem>
-// 	 );
-// }
 
 export default TodoItem;
