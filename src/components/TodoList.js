@@ -4,10 +4,12 @@ import TodoItem from "./TodoItem";
 import { StyledToDoList } from "./styled"
 
 const TodoList = (props) => {
+	const rem = props.removeTodo
+	const togg = props.toggleComplete
 	return (
 		<StyledToDoList>
 		{/* <StyledToDoList className="todoListItems"> */}
-			{props.todos.map( todo => <TodoItem todo={todo} key={todo.id}/>)}
+			{props.todos.map( todo => <TodoItem newRem={rem} newTogg={togg} todo={todo} key={todo.id}/>)}
 		</StyledToDoList>
 	)
 }

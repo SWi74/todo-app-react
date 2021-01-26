@@ -49,13 +49,13 @@ class App extends React.Component {
         this.setState({"todos":[...this.state.todos,newTodo]});
       }
     
-      removeTodo = (todoId)=>{
-        const todos = this.state.todos.filter(todo=>todo.id !== todoId);
+      removeTodo = (todoId) => {
+        const todos = this.state.todos.filter(todo => todo.id !== todoId);
         // this.setState({"todos":todos});
         this.setState({todos}); // from ES6
       }
     
-      toggleComplete = (todoId)=>{
+      toggleComplete = (todoId) => {
         const todos = this.state.todos.map(
           todo=>todo.id===todoId ? {...todo,completed:!todo.completed} : {...todo}
         );

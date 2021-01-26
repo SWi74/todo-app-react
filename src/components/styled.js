@@ -97,6 +97,7 @@ export const StyledItem = styled.li`
     svg {
         fill: ${props => props.theme.colors.accent};
         flex-shrink: 0;
+        cursor: pointer;
     }
 `
 

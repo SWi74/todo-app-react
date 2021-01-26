@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
   }
   *, *::before, *::after {
     box-sizing: inherit;
+    outline: none;
+    user-select: none;
   }
   body {
     margin: 0;

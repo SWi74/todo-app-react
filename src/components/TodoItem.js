@@ -2,13 +2,13 @@ import React from 'react';
 
 import { StyledItem } from "./styled"
 
-const TodoItem = ( {todo, removeTodo, toggleComplete} ) => {
+const TodoItem = ( {todo, newRem, newTogg} ) => {
 	const handleRemove = (e) => {
-		removeTodo(todo.id)
+		newRem(todo.id)
 	}
 
 	const handleToggleComplete = (e) => {
-		toggleComplete(todo.id);
+		newTogg(todo.id);
 	}
 	
 	return (
@@ -19,11 +19,11 @@ const TodoItem = ( {todo, removeTodo, toggleComplete} ) => {
 				<span style={todo.completed ? { textDecoration: "line-through" } : {textDecoration: "none"} }>{todo.title}</span>
 			</div>
 			
-			<svg onClick={handleToggleComplete} width="18" height="18" viewBox="0 0 18 18">
+			<svg onClick={handleToggleComplete} width="50px" x="0px" y="0px" viewBox="0 0 50 50">
 				{todo.completed ? 
-					<path d="M19,3H5A2,2,0,0,0,3,5V19a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V5A2,2,0,0,0,19,3ZM10,17,5,12l1.41-1.41L10,14.17l7.59-7.59L19,8Z" transform="translate(-3 -3)"/>
+					<path d="M32,16H18c-1.1,0-2,0.9-2,2v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V18C34,16.9,33.1,16,32,16z M23,30l-5-5l1.41-1.41 L23,27.17l7.59-7.59L32,21L23,30z"/>
 				:
-					<path d="M19,5V19H5V5H19m0-2H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" transform="translate(-3 -3)"/>
+					<path d="M32,18v14H18V18H32 M32,16H18c-1.1,0-2,0.9-2,2v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V18C34,16.9,33.1,16,32,16z"/>
 				}
 			</svg>
 			
